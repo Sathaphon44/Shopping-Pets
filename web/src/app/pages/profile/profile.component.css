@@ -1,0 +1,10 @@
+.profile-container {
+    min-height: calc(100vh - 12rem);
+    width: 100%;
+}
+
+
+.profile-content {
+    background-color: antiquewhite;
+    margin: 1rem;
+}

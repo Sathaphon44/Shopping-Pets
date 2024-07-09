@@ -1,0 +1,42 @@
+.navbar-content {
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.navbar-ul-logo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+}
+
+.navbar-ul-link {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar-ul-link {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.navbar-content li {
+    list-style-type: none;
+    color: #000;
+}
+
+.navbar-content a {
+    list-style-type: none;
+    color: #000;
+}

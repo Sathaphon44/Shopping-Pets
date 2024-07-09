@@ -1,0 +1,41 @@
+<div class="cart-container">
+    <div class="cart-content">
+        <h2>Cart</h2>
+        <div class="cart-control-cart" *ngIf="listDataDetailCart !== undefined && !loading">
+            <button nz-button nzType="primary">จ่าย</button>
+            <button nz-button nzType="primary" (click)="handleClearCart()" nzDanger>ลบรายทั้งหมด</button>
+        </div>
+        <div class="cart-show-products">
+
+            <ng-container *ngIf="loading; else elseTemplate">
+                <div class="cart-show-product">
+                    <strong>Loading...</strong>
+                </div>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <ng-container *ngIf="listDataDetailCart === undefined; else elseTemplate">
+                    <div class="cart-show-product">
+                        <strong>ยังไม่มีน้อนน้อน</strong>
+                    </div>
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <div class="cart-show-product" *ngFor="let order of listDataDetailCart.pets;">
+                        <nz-card nzTitle={{order.name}} [nzExtra]="extraTemplate">
+                            <p class="show-card-detail"><strong>รายละเอียด: </strong>{{order.details}} </p>
+                            <p><strong>จำนวน: </strong>{{order.amount}}</p>
+                            <p><strong>ราคา: </strong>{{order.price}}</p>
+                            <p><strong>ราคารวม: </strong>{{order.amount * order.price}}</p>
+                            <p><strong>ประเภท: </strong>{{order.category}}</p>
+                            <div class="cart-icon-delete-pet">
+                                <span style="font-size: 1.5rem;" (click)="delete_pet(order)" nz-icon nzType="delete" nzTheme="outline"></span>
+                            </div>
+                        </nz-card>
+                        <ng-template #extraTemplate>
+                        <a>More</a>
+                        </ng-template>
+                    </div>
+                </ng-template>
+            </ng-template>
+        </div>
+    </div>
+</div>

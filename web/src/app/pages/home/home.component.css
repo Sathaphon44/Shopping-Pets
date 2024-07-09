@@ -1,0 +1,13 @@
+.home-container {
+    height: calc(100vh - 12rem);
+    width: calc(100% - 2rem);
+}
+
+.home-content {
+    margin: 0;
+    padding: 0;
+}
+.home-content h2{
+    font-size: 2rem;
+    font-weight: bold;
+}

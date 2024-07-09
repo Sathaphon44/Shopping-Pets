@@ -1,0 +1,1 @@
+Develop a shopping application using Angular for the frontend, Go Echo for the backend, and MongoDB as the database.

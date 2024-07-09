@@ -1,0 +1,61 @@
+<div class="navbar-container">
+    <ng-container *ngIf="dataUser !== null; else elseTemplate">
+        <nav class="navbar-content">
+            <ul class="navbar-ul-logo">
+                <li>
+                    <a [routerLink]="[ '/' ]">
+                        <strong>รับเลี้ยงน้อนน้อน</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-ul-link">
+                <li>
+                    <a [routerLink]="[ '/profile/setting' ]">
+                        <nz-avatar nzIcon="user"></nz-avatar>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="[ '/shop' ]">
+                        <span nz-icon nzType="shopping" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                    </a>
+                </li>
+                <li>
+                    <nz-badge nzSize="small" [nzCount]='amountPetsInCart'>
+                        <a [routerLink]="[ '/cart' ]">
+                            <span nz-icon nzType="shopping-cart" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                        </a>
+                    </nz-badge>
+                </li>
+                <li>
+                    <a (click)="showConfirm()">
+                        <span nz-icon nzType="logout" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <nav class="navbar-content" *ngIf="dataUser === null">
+            <ul class="navbar-ul-logo">
+                <li>
+                    <a [routerLink]="[ '/' ]">
+                        <strong>รับเลี้ยงน้อนน้อน</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-ul-link">
+                <li>
+                    <a [routerLink]="[ '/' ]">
+                        <span nz-icon nzType="home" nzTheme="outline" style="font-size: 1.5rem;"></span>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="[ '/login' ]">
+                        <span nz-icon nzType="login" nzTheme="outline"  style="font-size: 1.5rem;"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </ng-template>
+    
+</div>

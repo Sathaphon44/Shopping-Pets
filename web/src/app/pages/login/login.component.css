@@ -1,0 +1,42 @@
+.login-container {
+    height: calc(100vh - 12rem);
+    width: calc(100% - 2rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content {
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px 1px #646464;
+}
+
+.login-content input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.login-form {
+    width: 500px;
+}
+
+.login-form-margin {
+    margin-bottom: 16px;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+@media screen and (max-width: 523px) {
+    .login-form {
+        width: 300px;
+    }
+}

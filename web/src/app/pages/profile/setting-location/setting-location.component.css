@@ -1,0 +1,10 @@
+.setting-location-container {
+    min-height: calc(100vh - 12rem);
+    width: 100%;
+}
+
+
+.setting-location-content {
+    background-color: antiquewhite;
+    margin: 1rem;
+}
